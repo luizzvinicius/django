@@ -1,82 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Source Sans Pro', sans-serif;
-    outline: 1px solid red;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  
 }
 
 body {
-    display: grid;  
-    place-items: center;
-    width: 100vw;
-    min-height: 100vh;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+
+.titulo {
+  width: 100%;
+  position: fixed;
+}
+
+h2 {
+  color: #ffff;
+}
+
+#container {
+  position: relative;
+  background-color: #cb70ff;
+  border-radius: 0.5rem;
+  width: clamp(250px, 60%, 400px);
+  padding: 30px;
+}
+
+
+
+
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border: 3px solid #cb70ff;
+  border-radius: 10px;
 }
 
 ul {
-    background-color: #cb70ff;
-    border-radius: .5rem;
-    padding: 50px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
+  margin-top: 40px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  height: 200px;
+  gap: .8rem;
+  overflow-Y: scroll;
 }
 
 li {
-    min-width: 5rem;
+  width: 95%;
 }
 
 li a {
-    position: relative;
-    color: rgb(25, 143, 25);
-    text-decoration: none;
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    padding: .5rem 1rem;
-    isolation: isolate;
+  display: block;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  isolation: isolate;
+  border-bottom: 2px solid #fff;
 }
 
-li a::before{
-    position: absolute;
-    content: '';
-    top: 100%;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #fff;
-    z-index: -1;
-    transition: top 100ms linear;
+li a::before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: -1;
+  transition: top 100ms linear;
 }
 
-li a:hover::before{
-    top: 0;
+li a:hover::before {
+  top: 0;
 }
 
 li a:hover {
-    color: #cb70ff;
+  color: #cb70ff;
 }
 
 #titulo {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    place-items: center;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
 #titulo span {
-    font-size: 3rem;
-    animation: pisca 500ms infinite alternate;
-    color: black;
+  font-size: 3rem;
+  animation: pisca 500ms infinite alternate;
+  color: black;
 }
 
 @keyframes pisca {
-    to {
-        color: red;
-        scale: 1.2;
-    }
+  to {
+    color: red;
+    scale: 1.2;
+  }
 }
