@@ -23,7 +23,7 @@ form {
 }
 
 .container {
-    outline: 1px solid rgb(255, 0, 0);
+    
     background-color: #cb70ff;
     margin-bottom: 1rem;
     border-radius: 10px;
@@ -35,7 +35,7 @@ form {
 }
 
 .position {
-    outline: 1px solid rgb(255, 0, 0);
+    
     display: flex;
     justify-content: right;
     padding: 10px;
@@ -50,7 +50,32 @@ input[type=submit] {
     font-weight: bold;
 }
 
-input[type=radio] {
-    outline: 1px solid rgb(255, 0, 0);
-    width: 40px;
-}
+
+.input-radio {
+    position: relative;
+    appearance: none;
+    width: 1rem;
+    aspect-ratio: 1;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+  
+  .input-radio:checked{
+    border-color: #ba42ff;
+  }
+  
+  .input-radio:checked::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #ba42ff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .container label {
+    color: #fff;
+  }
